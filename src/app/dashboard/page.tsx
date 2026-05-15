@@ -8,7 +8,7 @@ import TopRepos from "@/components/TopRepos";
 import LanguageBreakdown from "@/components/LanguageBreakdown";
 import IssueMetrics from "@/components/IssueMetrics";
 import StreakAtRiskBanner from "@/components/StreakAtRiskBanner";
-
+import FriendComparison from "@/components/FriendComparison";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
@@ -26,7 +26,7 @@ export default async function DashboardPage() {
 
       <StreakAtRiskBanner />
 
-      {/* Row 1: Contribution graph + Streak + Goals */}
+      {/* Row 1: Contribution graph + Streak + Friend Comparison */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <ContributionGraph />
@@ -34,6 +34,7 @@ export default async function DashboardPage() {
 
         <div className="flex flex-col gap-6">
           <StreakTracker />
+          <FriendComparison />
         </div>
       </div>
 
