@@ -34,7 +34,7 @@ test("landing shows footer", async ({ page }) => {
   await page.goto("/");
 
 
-  await expect(page.getByRole("contentinfo")).toBeVisible();
+  await expect(page.getByRole("contentinfo").first()).toBeVisible();
 });
 
 
